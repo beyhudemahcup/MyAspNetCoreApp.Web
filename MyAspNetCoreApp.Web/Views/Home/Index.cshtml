@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--we can add css script to change title's color-->
+@section Css
+{
+    <link rel="stylesheet" href="~/css/example.css" asp-append-version="true" />
+
+    <style>
+        h1
+        {
+            color:coral;
+            background-color:greenyellow;
+        }
+    </style>
+}
+
+@section Scripts
+{
+    <script type="text/javascript">alert("Welcome to the page")</script>
+}
+
+<h1>Hello World!</h1>
+<hr />
+<h2>Hello World but css comes from another class!</h2>
+<partial name = "_MenuPartialView" />

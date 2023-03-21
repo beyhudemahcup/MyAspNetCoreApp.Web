@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Controller Example</h1>
+
+<!-- we use et to show Razor our code is actually C#-->
+@{
+    var name = ViewBag.name;
+    <p>@name</p>
+}
+
+<p>@name</p>
+
+<p>@ViewBag.name</p>
+
+<hr />
+<p> Age : @ViewData["Age"], @ViewData["Text"]</p>
+<h1>Names</h1>
+
+@{
+    foreach (var item in ViewData["Names"] as List<string>)
+    {
+        <p>@item</p>
+    }
+}
+
+<p>
+    Id : @ViewBag.person.Id,
+    Name : @ViewBag.person.Name,
+    Surname : @TempData["Surname"],
+    Age : @ViewBag.person.Age
+</p>
